@@ -146,16 +146,19 @@ ga('send', 'pageview');
   window.onload = function()
 {
     window.addEventListener('touchmove', function name(e) {
-        console.log(e.srcElement,1)
+        console.log(e.srcElement,  document.getElementsByTagName('main')[0])
+        if (e.srcElement ==  document.getElementsByTagName('main')[0]) {
+          e.preventDefault();
+        }
       })
 
       document.getElementsByTagName('footer')[0].addEventListener('touchmove', function name(e) {
         e.preventDefault();
       })
 
-      document.getElementsByTagName('main')[0].addEventListener('touchmove', function name(e) {
-        e.preventDefault();
-      })
+      // document.getElementsByTagName('main')[0].addEventListener('touchmove', function name(e) {
+      //   e.preventDefault();
+      // })
       // console.log(document.getElementsByTagName('header'))
       document.getElementsByTagName('header')[0].addEventListener('touchmove', function name(e) {
         console.log(1)
