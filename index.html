@@ -19,7 +19,7 @@ Released under the MIT license: http://jsbin.mit-license.org
 .app-container {
   position: absolute;
   top: 0;
-  bottom: 0;
+  bottom: 251px;
   right: 0;
   left: 0;
 }
@@ -146,8 +146,9 @@ ga('send', 'pageview');
   window.onload = function()
 {
     window.addEventListener('touchmove', function name(e) {
-        console.log(e.srcElement,  document.getElementsByTagName('main')[0])
+        // console.log(e.srcElement,  document.getElementsByTagName('main')[0])
         if (e.srcElement ==  document.getElementsByTagName('main')[0]) {
+          console.lo(123)
           e.preventDefault();
         }
       })
@@ -155,8 +156,9 @@ ga('send', 'pageview');
       document.getElementsByTagName('footer')[0].addEventListener('touchmove', function name(e) {
         e.preventDefault();
       })
-
+console.log( document.getElementsByTagName('html')[0])
       document.getElementsByTagName('html')[0].addEventListener('touchmove', function name(e) {
+        console.log(e)
         e.preventDefault();
       })
       // console.log(document.getElementsByTagName('header'))
