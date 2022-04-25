@@ -144,7 +144,14 @@ ga('send', 'pageview');
 </script>
 <script>
       window.addEventListener('touchmove', function name(e) {
-        console.log(e.srcElement)
+        console.log(e.srcElement,1)
+      })
+
+      document.getElementsByName('footer').addEventListener('touchmove', function name(e) {
+        e.preventDefault();
+      })
+      document.getElementsByName('header').addEventListener('touchmove', function name(e) {
+        e.preventDefault();
       })
 </script>
 </body>
