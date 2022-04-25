@@ -143,16 +143,22 @@ ga('send', 'pageview');
 
 </script>
 <script>
-      window.addEventListener('touchmove', function name(e) {
+  window.onload = function()
+{
+    window.addEventListener('touchmove', function name(e) {
         console.log(e.srcElement,1)
       })
 
-      document.getElementsByName('footer').addEventListener('touchmove', function name(e) {
+      document.getElementsByTagName('footer')[0].addEventListener('touchmove', function name(e) {
         e.preventDefault();
       })
-      document.getElementsByName('header').addEventListener('touchmove', function name(e) {
+      // console.log(document.getElementsByTagName('header'))
+      document.getElementsByTagName('header')[0].addEventListener('touchmove', function name(e) {
+        console.log(1)
         e.preventDefault();
       })
+};
+     
 </script>
 </body>
 </html>
